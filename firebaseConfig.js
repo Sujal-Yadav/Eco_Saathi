@@ -15,9 +15,7 @@ const firebaseConfig = {
     appId: "1:660356380091:web:ec15b3be49c33e91b1809e"
 };
 AppRegistry.registerComponent(appName, () => MainApp);
-if (!firebase.apps.length) {
-    initializeApp(firebaseConfig);
-}
+
 export default firebaseConfig;
 
 

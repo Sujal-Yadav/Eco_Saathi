@@ -7,6 +7,7 @@ import SignUp from './src/Signup';
 import Dashboard from './src/Dashboard';
 import Header from './components/Header';
 import 'firebase/auth';
+import firebase from './firebaseInit';
 
 const Stack = createStackNavigator();
 
