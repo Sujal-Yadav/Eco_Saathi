@@ -1,20 +1,43 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import React, { useEffect } from 'react';
+import firebaseConfig from './firebaseConfig';
+import Login from './src/Login';
+import SignUp from './src/Signup';
+import Dashboard from './src/Dashboard';
+import Header from './components/Header';
+import 'firebase/auth';
 
-export default function App() {
+const Stack = createStackNavigator();
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Stack.Navigator>
+      <Stack.Screen name="Login" component={Login}
+        options={{
+          headerTitle: () => <Header name="Eco Saathi" />
+        }}
+      />
+      <Stack.Screen name="Signup" component={SignUp}
+        options={{
+          headerTitle: () => <Header name="Eco Saathi" />
+        }}
+      />
+      <Stack.Screen name="Dashboard" component={Dashboard}
+        options={{
+          headerTitle: () => <Header name="Dashboard" />
+        }}
+      />
+    </Stack.Navigator>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+function MainApp() {
+  return (
+    <NavigationContainer>
+      <App />
+    </NavigationContainer>
+  );
+}
+
+export default MainApp;
