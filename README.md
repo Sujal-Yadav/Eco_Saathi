@@ -18,14 +18,12 @@ Eco_Saathi is a mobile application built using React Native. The application pro
 
 ### 1. Clone the Repository
 
-```bash
-git clone https://github.com/Sujal-Yadav/Eco_Saathi.git
-cd Eco_Saathi```
+`git clone https://github.com/Sujal-Yadav/Eco_Saathi.git`
+`cd Eco_Saathi`
 
 ### 1. Install Dependencies
 
-```bash
-npm install```
+`npm install`
 
 ### 2. Setup Firebase
 - Create a new Firebase project.
@@ -34,5 +32,4 @@ npm install```
 
 ### 3. Run the application
 
-```bash
-expo start```
+`expo start`
